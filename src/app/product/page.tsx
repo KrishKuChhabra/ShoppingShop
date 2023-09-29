@@ -1,10 +1,13 @@
 import React from 'react'
-import { ProductPageProps, ProductsProps } from '../../../types/type';
+import {  ProductsProps } from '../../../types/type';
 import { getSingleProduct, getTrendingProducts } from '@/helpers';
 import Container from '@/components/Container';
 import ProductsData from '@/components/produtsbase/ProductsData';
 import SingleProduct from '@/components/produtsbase/SingleProduct';
 
+ type ProductPageProps ={
+  searchParams: { [key: string]: string | string[] | undefined };
+}
 const ProductPage = async ({searchParams}:ProductPageProps) => {
 
     const _idString= searchParams?._id;

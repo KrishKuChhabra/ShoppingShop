@@ -28,7 +28,3 @@ export interface AmountPriceProps{
     amount:number
 }
 
-export type ProductPageProps={
-  [x: string]: any;
-  searchParams:{[key:string]:string | string[] | undefined}
-}
